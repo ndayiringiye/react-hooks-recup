@@ -1,14 +1,21 @@
+import { useState } from "react";
+import { contentsTheme } from "./contents/ThemesContext";
 import ContextManagement from "./Components/ContextManagement";
 import Counter from "./Components/Counter";
-import FectingData from "./Components/FectingData";
-const App = () => {
-  return (
-    <div>
-      <ContextManagement />
-     <Counter />
-     <FectingData />
-    </div>
-  )
-}
+import FetchingData from "./Components/FectingData";
 
-export default App
+const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  return (
+    <contentsTheme.Provider value={{ theme, setTheme }}>
+      <div className={theme === "light" ? "bg-white text-black p-5" : "bg-black text-white p-5"}>
+        <ContextManagement />
+        <Counter />
+        <FetchingData />
+      </div>
+    </contentsTheme.Provider>
+  );
+};
+
+export default App;

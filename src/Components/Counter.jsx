@@ -18,12 +18,12 @@ const Counter = () => {
   };
 
   return (
-    <div>
-      <button onClick={incrementHandler}>Increment: {counters.increment}</button>
-      <button onClick={() => resetHandler("increment")}>Reset Increment</button>
+    <div className="flex gap-6 w-11/12 mx-auto">
+      <button onClick={incrementHandler} className="border p-3 font-bold">Increment: {counters.increment}</button>
+      <button onClick={() => resetHandler("increment")} className="border p-3 font-bold">Reset Increment</button>
 
-      <button onClick={decrementHandler}>Decrement: {counters.decrement}</button>
-      <button onClick={() => resetHandler("decrement")}>Reset Decrement</button>
+      <button onClick={decrementHandler} className="border p-3 font-bold">Decrement: {counters.decrement}</button>
+      <button onClick={() => resetHandler("decrement")} className="border p-3 font-bold">Reset Decrement</button>
     </div>
   );
 };
