@@ -1,8 +1,11 @@
-import React from 'react'
-
+import Counter from "./Components/Counter";
+import FectingData from "./Components/FectingData";
 const App = () => {
   return (
-    <div>App=</div>
+    <div>
+     <Counter />
+     <FectingData />
+    </div>
   )
 }
 

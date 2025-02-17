@@ -10,7 +10,7 @@ const Count = () => {
       <button onClick={() => setIncrement(0)}>reset increment : {increment}</button>
       <button onClick={() => setDecrement(pre => pre -1)}>{decrement}</button>
       <button onClick={() => setDecrement(0)}>reset dencrement : {decrement}</button>
-
+       
     </div>
     </div>
   )
